@@ -3,83 +3,279 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Twincap</title>
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1904073424792088" crossorigin="anonymous"></script>
+    <title>Twincap Base64 도구 소개</title>
+    <meta
+      name="description"
+      content="twincap.github.io의 최상위 페이지로, Base64 인코딩/디코딩 웹 도구의 소개, 사용 안내, 개인정보처리방침과 문의처를 제공합니다."
+    />
+    <script
+      async
+      src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXX"
+      crossorigin="anonymous"
+    ></script>
     <style>
       :root {
         color-scheme: light;
+        --ink: #1a1a17;
+        --muted: #4a4842;
+        --accent: #0f6b5f;
+        --accent-soft: #dff0ec;
+        --card: #ffffffd9;
+        --border: #d8d1c4;
+      }
+      * {
+        box-sizing: border-box;
       }
       body {
         margin: 0;
-        padding: 0;
-        font-family: "Georgia", "Times New Roman", serif;
-        background: linear-gradient(135deg, #f6f2e8 0%, #e9f4ef 100%);
-        color: #1a1a1a;
+        font-family: "Gowun Batang", "Nanum Myeongjo", "Malgun Gothic", serif;
+        color: var(--ink);
+        background-image: radial-gradient(circle at top left, #fdf7ea 0%, #f6f2e8 45%, #e5f2ec 100%);
+        background-attachment: fixed;
       }
-      header {
-        padding: 48px 24px 24px;
-        text-align: center;
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+      .container {
+        width: min(1080px, 92vw);
+        margin: 0 auto;
+      }
+      .site-header {
+        padding: 28px 0 12px;
+      }
+      .brand {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+        font-size: 20px;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+      }
+      .nav {
+        display: flex;
+        gap: 14px;
+        font-size: 14px;
+        color: var(--muted);
+        flex-wrap: wrap;
+      }
+      .hero {
+        padding: 32px 0 24px;
+      }
+      .eyebrow {
+        font-size: 14px;
+        text-transform: uppercase;
+        letter-spacing: 0.2em;
+        color: var(--muted);
       }
       h1 {
-        margin: 0 0 12px;
-        letter-spacing: 0.08em;
-        text-transform: uppercase;
-        font-size: 32px;
+        font-size: clamp(30px, 4vw, 46px);
+        margin: 12px 0 16px;
       }
-      p {
-        margin: 0 auto;
-        max-width: 640px;
-        line-height: 1.6;
+      .hero p {
+        max-width: 720px;
+        line-height: 1.7;
         font-size: 18px;
       }
-      main {
-        padding: 24px;
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-        gap: 16px;
-        max-width: 960px;
-        margin: 0 auto 48px;
+      .cta {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        margin-top: 18px;
+        padding: 12px 18px;
+        border-radius: 999px;
+        background: var(--accent);
+        color: #fff;
+        font-size: 15px;
+        letter-spacing: 0.04em;
       }
-      section {
-        background: #ffffffcc;
-        border: 1px solid #d8d1c4;
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        gap: 18px;
+        margin: 28px 0 40px;
+      }
+      .card {
+        background: var(--card);
+        border: 1px solid var(--border);
+        border-radius: 14px;
         padding: 18px;
-        border-radius: 12px;
-        box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
       }
       h2 {
-        margin: 0 0 8px;
-        font-size: 18px;
+        font-size: 22px;
+        margin: 0 0 10px;
+      }
+      h3 {
+        font-size: 16px;
+        margin: 14px 0 6px;
+      }
+      p {
+        margin: 0 0 12px;
+        line-height: 1.7;
+        color: var(--ink);
+      }
+      ul {
+        margin: 0 0 12px 18px;
+        padding: 0;
+        line-height: 1.7;
+        color: var(--ink);
+      }
+      .section {
+        padding: 26px 0;
+      }
+      .highlight {
+        background: var(--accent-soft);
+        border-radius: 12px;
+        padding: 14px 16px;
+        color: #1b3833;
       }
       footer {
         text-align: center;
-        padding: 24px;
+        padding: 32px 0 40px;
+        color: var(--muted);
         font-size: 14px;
-        color: #5a5a5a;
+      }
+      @media (max-width: 720px) {
+        .brand {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+        .cta {
+          width: 100%;
+          justify-content: center;
+        }
       }
     </style>
   </head>
   <body>
-    <header>
-      <h1>Twincap</h1>
-      <p>환영합니다. 이 페이지는 서비스 소개와 업데이트를 위한 임시 루트 페이지입니다.</p>
+    <header class="site-header">
+      <div class="container">
+        <div class="brand">
+          <span>Twincap</span>
+          <nav class="nav">
+            <a href="#intro">서비스 소개</a>
+            <a href="#features">주요 특징</a>
+            <a href="#usage">사용 방법</a>
+            <a href="#privacy">개인정보처리방침</a>
+            <a href="#contact">문의처</a>
+          </nav>
+        </div>
+      </div>
     </header>
+
     <main>
-      <section>
-        <h2>소개</h2>
-        <p>Twincap의 아이디어와 작업 방향을 정리하는 공간입니다.</p>
+      <section class="hero" id="intro">
+        <div class="container">
+          <div class="eyebrow">Base64 인코딩 · 디코딩 도구</div>
+          <h1>텍스트를 깔끔하게 변환하는 Base64 웹 툴</h1>
+          <p>
+            twincap.github.io는 Base64 인코딩/디코딩을 빠르게 처리할 수 있는 웹 도구
+            <strong>/Base64/</strong>의 최상위 페이지입니다. Base64는 바이너리 데이터를
+            텍스트로 안전하게 전달하기 위해 널리 쓰이는 표준 방식이며, 개발과 데이터
+            전달 과정에서 자주 필요합니다. 이 사이트는 간단한 입력만으로 변환 결과를
+            확인하고, 바로 복사해 사용할 수 있도록 구성되어 있습니다.
+          </p>
+          <p>
+            Base64 도구는 개발자, 디자이너, 운영자 모두가 사용할 수 있도록
+            간결한 흐름을 지향합니다. 복잡한 설정 없이 웹에서 바로 접근할 수 있으며,
+            설명과 예시를 통해 초보자도 이해하기 쉽게 안내합니다.
+          </p>
+          <a class="cta" href="/Base64/">Base64 도구 바로가기</a>
+        </div>
       </section>
-      <section>
-        <h2>현재 상태</h2>
-        <p>프로젝트 초기 단계이며, 핵심 기능을 다듬고 있습니다.</p>
+
+      <section class="section" id="features">
+        <div class="container">
+          <h2>주요 특징</h2>
+          <div class="grid">
+            <div class="card">
+              <h3>즉시 변환 흐름</h3>
+              <p>입력과 동시에 결과를 확인할 수 있도록 설계된 직관적인 화면입니다.</p>
+            </div>
+            <div class="card">
+              <h3>가벼운 사용성</h3>
+              <p>불필요한 절차 없이 웹에서 바로 사용 가능한 간단한 도구입니다.</p>
+            </div>
+            <div class="card">
+              <h3>실무 친화적 구성</h3>
+              <p>짧은 텍스트부터 긴 문자열까지 안정적으로 변환할 수 있도록 합니다.</p>
+            </div>
+          </div>
+          <div class="highlight">
+            Base64는 이메일 본문, URL 파라미터, JSON 전송 등 다양한 환경에서 활용됩니다.
+            이 도구는 그러한 작업을 더 빠르고 정확하게 처리하는 데 목적이 있습니다.
+          </div>
+        </div>
       </section>
-      <section>
-        <h2>연락</h2>
-        <p>문의는 준비 중인 공식 채널을 통해 곧 안내드릴 예정입니다.</p>
+
+      <section class="section" id="usage">
+        <div class="container">
+          <h2>사용 방법</h2>
+          <p>
+            Base64 도구는 특별한 회원가입 없이 사용할 수 있습니다. 아래 절차에 따라
+            누구나 쉽게 인코딩 또는 디코딩을 진행할 수 있습니다.
+          </p>
+          <ul>
+            <li><strong>/Base64/</strong> 페이지로 이동합니다.</li>
+            <li>변환할 텍스트를 입력하고 인코딩 또는 디코딩 모드를 선택합니다.</li>
+            <li>변환 결과를 확인한 뒤 복사하여 원하는 곳에 활용합니다.</li>
+          </ul>
+          <p>
+            Base64는 데이터 손실 없이 텍스트로 변환하는 방식이므로, 변환 전후의
+            데이터 일치 여부를 확인하는 데에도 유용합니다.
+          </p>
+        </div>
+      </section>
+
+      <section class="section" id="privacy">
+        <div class="container">
+          <h2>개인정보처리방침</h2>
+          <p>
+            Twincap은 이용자의 개인정보를 존중하며 최소한의 정보만을 필요 목적에 맞게
+            처리합니다. 본 방침은 twincap.github.io 및 Base64 도구 페이지에 적용됩니다.
+          </p>
+          <h3>광고 서비스 사용</h3>
+          <p>
+            본 사이트는 Google AdSense 광고 서비스를 사용합니다. 광고 제공을 위해
+            Google 및 그 파트너는 사용자에게 맞춤형 광고를 제공할 수 있습니다.
+          </p>
+          <h3>쿠키 사용 안내</h3>
+          <p>
+            Google AdSense는 쿠키를 사용하여 이전 방문 정보를 기반으로 광고를
+            게재할 수 있습니다. 사용자는 브라우저 설정을 통해 쿠키 저장을
+            거부하거나 삭제할 수 있습니다.
+          </p>
+          <h3>개인정보 수집 항목 및 목적</h3>
+          <ul>
+            <li>문의 시 이메일 주소와 문의 내용: 문의 응답 및 고객 지원 목적</li>
+            <li>쿠키, 광고 식별자, 접속 로그, 브라우저/OS 정보: 광고 제공 및 통계 분석 목적</li>
+          </ul>
+          <h3>개인정보 관련 문의</h3>
+          <p>
+            개인정보와 관련된 문의는 아래 이메일로 연락해 주세요.
+            <a href="mailto:contact@twincap.tools">contact@twincap.tools</a>
+          </p>
+        </div>
+      </section>
+
+      <section class="section" id="contact">
+        <div class="container">
+          <h2>문의처</h2>
+          <p>
+            서비스 관련 문의, 제휴 제안, 개선 요청은 아래 이메일로 전달해 주세요.
+            가능한 빠르게 확인 후 답변드리겠습니다.
+          </p>
+          <p>
+            이메일: <a href="mailto:contact@twincap.tools">contact@twincap.tools</a>
+          </p>
+        </div>
       </section>
     </main>
+
     <footer>
-      <p>Copyright 2026 Twincap. All rights reserved.</p>
+      <div class="container">Copyright 2026 Twincap. All rights reserved.</div>
     </footer>
   </body>
 </html>
