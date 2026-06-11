@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://twincap.github.io/sitemap.xml

@@ -3,279 +3,648 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Twincap Base64 도구 소개</title>
+    <title>Twincap | GitHub 저장소 소개</title>
     <meta
       name="description"
-      content="twincap.github.io의 최상위 페이지로, Base64 인코딩/디코딩 웹 도구의 소개, 사용 안내, 개인정보처리방침과 문의처를 제공합니다."
+      content="Twincap의 GitHub 저장소 전체를 소개하는 개발자 포트폴리오입니다. 웹 도구, 미니게임, 자동화, 학습용 저장소를 한곳에서 확인할 수 있습니다."
     />
-    <script
-      async
-      src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXX"
-      crossorigin="anonymous"
-    ></script>
-    <style>
-      :root {
-        color-scheme: light;
-        --ink: #1a1a17;
-        --muted: #4a4842;
-        --accent: #0f6b5f;
-        --accent-soft: #dff0ec;
-        --card: #ffffffd9;
-        --border: #d8d1c4;
-      }
-      * {
-        box-sizing: border-box;
-      }
-      body {
-        margin: 0;
-        font-family: "Gowun Batang", "Nanum Myeongjo", "Malgun Gothic", serif;
-        color: var(--ink);
-        background-image: radial-gradient(circle at top left, #fdf7ea 0%, #f6f2e8 45%, #e5f2ec 100%);
-        background-attachment: fixed;
-      }
-      a {
-        color: inherit;
-        text-decoration: none;
-      }
-      .container {
-        width: min(1080px, 92vw);
-        margin: 0 auto;
-      }
-      .site-header {
-        padding: 28px 0 12px;
-      }
-      .brand {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        gap: 16px;
-        font-size: 20px;
-        letter-spacing: 0.14em;
-        text-transform: uppercase;
-      }
-      .nav {
-        display: flex;
-        gap: 14px;
-        font-size: 14px;
-        color: var(--muted);
-        flex-wrap: wrap;
-      }
-      .hero {
-        padding: 32px 0 24px;
-      }
-      .eyebrow {
-        font-size: 14px;
-        text-transform: uppercase;
-        letter-spacing: 0.2em;
-        color: var(--muted);
-      }
-      h1 {
-        font-size: clamp(30px, 4vw, 46px);
-        margin: 12px 0 16px;
-      }
-      .hero p {
-        max-width: 720px;
-        line-height: 1.7;
-        font-size: 18px;
-      }
-      .cta {
-        display: inline-flex;
-        align-items: center;
-        gap: 8px;
-        margin-top: 18px;
-        padding: 12px 18px;
-        border-radius: 999px;
-        background: var(--accent);
-        color: #fff;
-        font-size: 15px;
-        letter-spacing: 0.04em;
-      }
-      .grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-        gap: 18px;
-        margin: 28px 0 40px;
-      }
-      .card {
-        background: var(--card);
-        border: 1px solid var(--border);
-        border-radius: 14px;
-        padding: 18px;
-        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
-      }
-      h2 {
-        font-size: 22px;
-        margin: 0 0 10px;
-      }
-      h3 {
-        font-size: 16px;
-        margin: 14px 0 6px;
-      }
-      p {
-        margin: 0 0 12px;
-        line-height: 1.7;
-        color: var(--ink);
-      }
-      ul {
-        margin: 0 0 12px 18px;
-        padding: 0;
-        line-height: 1.7;
-        color: var(--ink);
-      }
-      .section {
-        padding: 26px 0;
-      }
-      .highlight {
-        background: var(--accent-soft);
-        border-radius: 12px;
-        padding: 14px 16px;
-        color: #1b3833;
-      }
-      footer {
-        text-align: center;
-        padding: 32px 0 40px;
-        color: var(--muted);
-        font-size: 14px;
-      }
-      @media (max-width: 720px) {
-        .brand {
-          flex-direction: column;
-          align-items: flex-start;
-        }
-        .cta {
-          width: 100%;
-          justify-content: center;
+    <meta name="author" content="Twincap" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://twincap.github.io/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Twincap | GitHub 저장소 소개" />
+    <meta
+      property="og:description"
+      content="Twincap의 모든 공개 GitHub 저장소를 설명과 함께 정리한 포트폴리오 페이지입니다."
+    />
+    <meta property="og:url" content="https://twincap.github.io/" />
+    <meta property="og:image" content="https://avatars.githubusercontent.com/u/152849944?v=4" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "ProfilePage",
+        "name": "Twincap GitHub 저장소 소개",
+        "url": "https://twincap.github.io/",
+        "about": {
+          "@type": "Person",
+          "name": "Twincap",
+          "url": "https://github.com/twincap",
+          "sameAs": ["https://github.com/twincap"]
         }
       }
-    </style>
+    </script>
   </head>
   <body>
+    <a class="skip-link" href="#main">본문으로 이동</a>
+
     <header class="site-header">
-      <div class="container">
-        <div class="brand">
+      <div class="container header-inner">
+        <a class="brand" href="/" aria-label="Twincap 홈">
+          <span class="brand-mark">TC</span>
           <span>Twincap</span>
-          <nav class="nav">
-            <a href="#intro">서비스 소개</a>
-            <a href="#features">주요 특징</a>
-            <a href="#usage">사용 방법</a>
-            <a href="#privacy">개인정보처리방침</a>
-            <a href="#contact">문의처</a>
-          </nav>
-        </div>
+        </a>
+        <nav class="site-nav" aria-label="주요 메뉴">
+          <a href="#about">소개</a>
+          <a href="#repos">저장소</a>
+          <a href="#policy">운영 원칙</a>
+          <a href="privacy.html">개인정보처리방침</a>
+        </nav>
       </div>
     </header>
 
-    <main>
+    <main id="main">
       <section class="hero" id="intro">
-        <div class="container">
-          <div class="eyebrow">Base64 인코딩 · 디코딩 도구</div>
-          <h1>텍스트를 깔끔하게 변환하는 Base64 웹 툴</h1>
-          <p>
-            twincap.github.io는 Base64 인코딩/디코딩을 빠르게 처리할 수 있는 웹 도구
-            <strong>/Base64/</strong>의 최상위 페이지입니다. Base64는 바이너리 데이터를
-            텍스트로 안전하게 전달하기 위해 널리 쓰이는 표준 방식이며, 개발과 데이터
-            전달 과정에서 자주 필요합니다. 이 사이트는 간단한 입력만으로 변환 결과를
-            확인하고, 바로 복사해 사용할 수 있도록 구성되어 있습니다.
+        <canvas id="hero-canvas" aria-hidden="true"></canvas>
+        <div class="container hero-content">
+          <p class="eyebrow">GitHub Portfolio</p>
+          <h1>Twincap의 GitHub 저장소를 한곳에 정리했습니다</h1>
+          <p class="hero-copy">
+            이 페이지는 Twincap이 공개한 웹 도구, 미니게임, 자동화 스크립트, 학습용 프로젝트를
+            소개하는 루트 사이트입니다. 단순히 링크만 모아둔 화면이 아니라 각 저장소가 어떤
+            목적으로 만들어졌고, 어떤 기술을 다루며, 어디에서 코드를 확인할 수 있는지 설명합니다.
           </p>
-          <p>
-            Base64 도구는 개발자, 디자이너, 운영자 모두가 사용할 수 있도록
-            간결한 흐름을 지향합니다. 복잡한 설정 없이 웹에서 바로 접근할 수 있으며,
-            설명과 예시를 통해 초보자도 이해하기 쉽게 안내합니다.
-          </p>
-          <a class="cta" href="/Base64/">Base64 도구 바로가기</a>
-        </div>
-      </section>
-
-      <section class="section" id="features">
-        <div class="container">
-          <h2>주요 특징</h2>
-          <div class="grid">
-            <div class="card">
-              <h3>즉시 변환 흐름</h3>
-              <p>입력과 동시에 결과를 확인할 수 있도록 설계된 직관적인 화면입니다.</p>
-            </div>
-            <div class="card">
-              <h3>가벼운 사용성</h3>
-              <p>불필요한 절차 없이 웹에서 바로 사용 가능한 간단한 도구입니다.</p>
-            </div>
-            <div class="card">
-              <h3>실무 친화적 구성</h3>
-              <p>짧은 텍스트부터 긴 문자열까지 안정적으로 변환할 수 있도록 합니다.</p>
-            </div>
+          <div class="hero-actions" aria-label="주요 링크">
+            <a class="button primary" href="#repos">전체 저장소 보기</a>
+            <a class="button secondary" href="https://github.com/twincap" rel="me noopener" target="_blank">
+              GitHub 프로필
+            </a>
           </div>
-          <div class="highlight">
-            Base64는 이메일 본문, URL 파라미터, JSON 전송 등 다양한 환경에서 활용됩니다.
-            이 도구는 그러한 작업을 더 빠르고 정확하게 처리하는 데 목적이 있습니다.
+          <div class="profile-strip">
+            <img
+              src="https://avatars.githubusercontent.com/u/152849944?v=4"
+              alt="Twincap GitHub 프로필 이미지"
+              width="56"
+              height="56"
+            />
+            <p>
+              JavaScript, Python, HTML, C#, Batchfile 기반의 실험을 공개 저장소로 남기고 있습니다.
+              완성도 높은 서비스뿐 아니라 배운 점이 있는 작은 시도도 포트폴리오의 일부로 정리합니다.
+            </p>
           </div>
         </div>
       </section>
 
-      <section class="section" id="usage">
-        <div class="container">
-          <h2>사용 방법</h2>
-          <p>
-            Base64 도구는 특별한 회원가입 없이 사용할 수 있습니다. 아래 절차에 따라
-            누구나 쉽게 인코딩 또는 디코딩을 진행할 수 있습니다.
-          </p>
-          <ul>
-            <li><strong>/Base64/</strong> 페이지로 이동합니다.</li>
-            <li>변환할 텍스트를 입력하고 인코딩 또는 디코딩 모드를 선택합니다.</li>
-            <li>변환 결과를 확인한 뒤 복사하여 원하는 곳에 활용합니다.</li>
-          </ul>
-          <p>
-            Base64는 데이터 손실 없이 텍스트로 변환하는 방식이므로, 변환 전후의
-            데이터 일치 여부를 확인하는 데에도 유용합니다.
-          </p>
+      <section class="section" id="about" aria-labelledby="about-title">
+        <div class="container two-column">
+          <div>
+            <p class="section-label">About</p>
+            <h2 id="about-title">무엇을 다루는 페이지인가</h2>
+          </div>
+          <div class="copy-stack">
+            <p>
+              Twincap의 GitHub에는 브라우저에서 바로 실행하는 도구, 짧게 플레이할 수 있는 게임,
+              반복 작업을 줄이기 위한 자동화 코드, HTML/CSS/JavaScript를 익히기 위한 웹 실험이
+              섞여 있습니다. 이 페이지는 그런 저장소들을 방문자가 바로 이해할 수 있도록 다시
+              설명하는 색인입니다.
+            </p>
+            <p>
+              저장소 이름만으로는 프로젝트의 의도를 알기 어려운 경우가 많습니다. 그래서 각 카드에
+              원래 저장소 설명과 함께, 어떤 문제를 풀려는 프로젝트인지, 현재 어떤 단계의 실험인지,
+              코드를 볼 때 어떤 점을 보면 좋은지 적어 두었습니다.
+            </p>
+            <p>
+              애드센스 정책을 고려해 현재 루트 사이트에는 광고 스크립트나 광고 슬롯을 넣지
+              않았습니다. 먼저 충분한 자체 콘텐츠와 명확한 내비게이션을 갖춘 뒤, 승인 이후에도
+              콘텐츠가 부족한 화면이나 이동 전용 화면에는 광고를 배치하지 않는 방향으로 운영합니다.
+            </p>
+          </div>
         </div>
       </section>
 
-      <section class="section" id="privacy">
+      <section class="section repo-section" id="repos" aria-labelledby="repos-title">
         <div class="container">
-          <h2>개인정보처리방침</h2>
-          <p>
-            Twincap은 이용자의 개인정보를 존중하며 최소한의 정보만을 필요 목적에 맞게
-            처리합니다. 본 방침은 twincap.github.io 및 Base64 도구 페이지에 적용됩니다.
-          </p>
-          <h3>광고 서비스 사용</h3>
-          <p>
-            본 사이트는 Google AdSense 광고 서비스를 사용합니다. 광고 제공을 위해
-            Google 및 그 파트너는 사용자에게 맞춤형 광고를 제공할 수 있습니다.
-          </p>
-          <h3>쿠키 사용 안내</h3>
-          <p>
-            Google AdSense는 쿠키를 사용하여 이전 방문 정보를 기반으로 광고를
-            게재할 수 있습니다. 사용자는 브라우저 설정을 통해 쿠키 저장을
-            거부하거나 삭제할 수 있습니다.
-          </p>
-          <h3>개인정보 수집 항목 및 목적</h3>
-          <ul>
-            <li>문의 시 이메일 주소와 문의 내용: 문의 응답 및 고객 지원 목적</li>
-            <li>쿠키, 광고 식별자, 접속 로그, 브라우저/OS 정보: 광고 제공 및 통계 분석 목적</li>
-          </ul>
-          <h3>개인정보 관련 문의</h3>
-          <p>
-            개인정보와 관련된 문의는 아래 이메일로 연락해 주세요.
-            <a href="mailto:contact@twincap.tools">contact@twincap.tools</a>
-          </p>
+          <div class="section-heading">
+            <div>
+              <p class="section-label">All Repositories</p>
+              <h2 id="repos-title">GitHub 저장소 전체 목록</h2>
+            </div>
+            <p>
+              2026년 6월 11일 기준 공개 API로 확인한 저장소 전체를 정리했습니다. 개인 소유 저장소,
+              포크, 참여 중인 저장소를 구분해서 표시했습니다.
+            </p>
+          </div>
+
+          <div class="repo-overview" aria-label="저장소 요약">
+            <div>
+              <strong>21</strong>
+              <span>공개 저장소</span>
+            </div>
+            <div>
+              <strong>6</strong>
+              <span>주요 언어</span>
+            </div>
+            <div>
+              <strong>2</strong>
+              <span>포크 저장소</span>
+            </div>
+            <div>
+              <strong>3</strong>
+              <span>참여/조직 저장소</span>
+            </div>
+          </div>
+
+          <div class="filter-bar" aria-label="저장소 필터">
+            <button class="filter-button active" type="button" data-filter="all" aria-pressed="true">전체</button>
+            <button class="filter-button" type="button" data-filter="web" aria-pressed="false">웹</button>
+            <button class="filter-button" type="button" data-filter="tool" aria-pressed="false">도구</button>
+            <button class="filter-button" type="button" data-filter="game" aria-pressed="false">게임</button>
+            <button class="filter-button" type="button" data-filter="automation" aria-pressed="false">자동화</button>
+            <button class="filter-button" type="button" data-filter="learning" aria-pressed="false">학습</button>
+            <button class="filter-button" type="button" data-filter="collab" aria-pressed="false">참여</button>
+          </div>
+
+          <div class="project-grid all-repo-grid" id="project-grid">
+            <article class="project-card featured" data-category="web tool">
+              <div class="project-topline">
+                <span class="language-dot js"></span>
+                <span>JavaScript</span>
+                <span class="repo-badge">개인</span>
+              </div>
+              <h3>Algoflow</h3>
+              <p>
+                알고리즘이나 작업 흐름을 웹 화면으로 정리해 보는 JavaScript 저장소입니다. 단계가
+                있는 문제를 코드와 인터페이스로 표현하는 실험에 가깝고, 향후 플로우 차트나 학습용
+                시각화 도구로 확장하기 좋은 프로젝트입니다.
+              </p>
+              <div class="repo-meta">
+                <span>최근 업데이트: 2026-06-10</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/twincap/Algoflow" target="_blank" rel="noopener">GitHub 저장소</a>
+              </div>
+            </article>
+
+            <article class="project-card" data-category="automation tool">
+              <div class="project-topline">
+                <span class="language-dot batch"></span>
+                <span>Batchfile</span>
+                <span class="repo-badge">개인</span>
+              </div>
+              <h3>Camera_X</h3>
+              <p>
+                저장소 설명은 “셔터소리무음”으로 등록되어 있습니다. 카메라 관련 설정이나 실행
+                환경을 배치 스크립트로 다루는 실험 저장소이며, 운영체제 환경에 따라 동작 조건이
+                달라질 수 있어 코드와 실행 과정을 함께 확인하는 것이 중요합니다.
+              </p>
+              <div class="repo-meta">
+                <span>최근 업데이트: 2026-05-31</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/twincap/Camera_X" target="_blank" rel="noopener">GitHub 저장소</a>
+              </div>
+            </article>
+
+            <article class="project-card" data-category="web tool">
+              <div class="project-topline">
+                <span class="language-dot js"></span>
+                <span>JavaScript</span>
+                <span class="repo-badge">개인</span>
+              </div>
+              <h3>Base64</h3>
+              <p>
+                텍스트를 Base64로 인코딩하거나 디코딩하는 웹 도구 저장소입니다. 저장소 설명에는
+                암호화/복호화로 적혀 있지만, Base64는 실제로는 암호화가 아니라 데이터를 텍스트로
+                표현하는 인코딩 방식입니다. 간단한 변환 UI와 브라우저 도구 구현을 확인할 수 있습니다.
+              </p>
+              <div class="repo-meta">
+                <span>최근 업데이트: 2026-05-27</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/twincap/Base64" target="_blank" rel="noopener">GitHub 저장소</a>
+              </div>
+            </article>
+
+            <article class="project-card" data-category="web">
+              <div class="project-topline">
+                <span class="language-dot html"></span>
+                <span>HTML</span>
+                <span class="repo-badge">개인</span>
+              </div>
+              <h3>twincap.github.io</h3>
+              <p>
+                지금 보고 있는 GitHub Pages 루트 사이트 저장소입니다. 개인 소개, 전체 저장소 설명,
+                개인정보처리방침, 이용 안내, 검색 보조 파일을 포함해 방문자가 프로젝트를 한눈에
+                파악할 수 있도록 구성한 포트폴리오입니다.
+              </p>
+              <div class="repo-meta">
+                <span>최근 업데이트: 2026-05-27</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/twincap/twincap.github.io" target="_blank" rel="noopener">GitHub 저장소</a>
+              </div>
+            </article>
+
+            <article class="project-card" data-category="automation collab">
+              <div class="project-topline">
+                <span class="language-dot python"></span>
+                <span>Python</span>
+                <span class="repo-badge alt">참여</span>
+              </div>
+              <h3>BachStudio_Ai</h3>
+              <p>
+                BachStudio 조직에 연결된 Python 기반 AI 프로젝트 저장소입니다. 모델 연동, AI 기능
+                구성, 백엔드와의 연결 가능성을 탐색하는 성격의 저장소로 보이며, Twincap 프로필에서
+                확인되는 참여 프로젝트로 함께 정리했습니다.
+              </p>
+              <div class="repo-meta">
+                <span>최근 업데이트: 2026-05-12</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/BachStudio/BachStudio_Ai" target="_blank" rel="noopener">GitHub 저장소</a>
+              </div>
+            </article>
+
+            <article class="project-card" data-category="automation">
+              <div class="project-topline">
+                <span class="language-dot python"></span>
+                <span>Python</span>
+                <span class="repo-badge">개인</span>
+              </div>
+              <h3>unciv_bot</h3>
+              <p>
+                Python으로 봇 로직과 자동화 흐름을 실험한 저장소입니다. 반복되는 판단을 코드로
+                분리하고 명령 처리, 상태 확인, 실행 흐름을 정리하는 데 초점을 둔 프로젝트로 볼 수
+                있습니다.
+              </p>
+              <div class="repo-meta">
+                <span>최근 업데이트: 2026-04-17</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/twincap/unciv_bot" target="_blank" rel="noopener">GitHub 저장소</a>
+              </div>
+            </article>
+
+            <article class="project-card" data-category="tool web">
+              <div class="project-topline">
+                <span class="language-dot neutral"></span>
+                <span>미지정</span>
+                <span class="repo-badge">개인</span>
+              </div>
+              <h3>yoeum_luck</h3>
+              <p>
+                저장소 설명은 “선택장애”로, 선택이 어려울 때 결정을 도와주는 아이디어에서 출발한
+                프로젝트입니다. 랜덤 선택, 후보 입력, 결과 표시 같은 작지만 실용적인 도구 화면으로
+                발전시키기 좋은 저장소입니다.
+              </p>
+              <div class="repo-meta">
+                <span>최근 업데이트: 2025-10-25</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/twincap/yoeum_luck" target="_blank" rel="noopener">GitHub 저장소</a>
+              </div>
+            </article>
+
+            <article class="project-card" data-category="tool web">
+              <div class="project-topline">
+                <span class="language-dot neutral"></span>
+                <span>미지정</span>
+                <span class="repo-badge">개인</span>
+              </div>
+              <h3>YeoumSleep</h3>
+              <p>
+                저장소 설명은 “쿨쿨”입니다. 수면이나 휴식 루틴처럼 일상적인 주제를 다루는 아이디어
+                저장소로 정리할 수 있으며, 간단한 기록 화면이나 루틴 체크 도구로 확장 가능한 소재입니다.
+              </p>
+              <div class="repo-meta">
+                <span>최근 업데이트: 2025-10-07</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/twincap/YeoumSleep" target="_blank" rel="noopener">GitHub 저장소</a>
+              </div>
+            </article>
+
+            <article class="project-card" data-category="automation tool">
+              <div class="project-topline">
+                <span class="language-dot python"></span>
+                <span>Python</span>
+                <span class="repo-badge">개인</span>
+              </div>
+              <h3>mp3_youtube</h3>
+              <p>
+                Python으로 미디어 파일 처리나 변환 흐름을 실험한 저장소입니다. 파일 이름에서 알 수
+                있듯 YouTube와 MP3 처리 과정을 다루며, 외부 서비스 약관과 저작권을 지키는 범위에서
+                개인 학습용 자동화 흐름을 살펴볼 수 있습니다.
+              </p>
+              <div class="repo-meta">
+                <span>최근 업데이트: 2025-09-27</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/twincap/mp3_youtube" target="_blank" rel="noopener">GitHub 저장소</a>
+              </div>
+            </article>
+
+            <article class="project-card" data-category="tool learning">
+              <div class="project-topline">
+                <span class="language-dot neutral"></span>
+                <span>미지정</span>
+                <span class="repo-badge">개인</span>
+              </div>
+              <h3>youtube.mp3</h3>
+              <p>
+                mp3_youtube와 비슷한 주제를 다루는 초기 실험 또는 보조 저장소로 보입니다. 미디어
+                변환 아이디어를 저장소 단위로 분리해 둔 기록이며, 실제 사용 전에는 코드와 목적을
+                직접 확인하는 것이 좋습니다.
+              </p>
+              <div class="repo-meta">
+                <span>최근 업데이트: 2025-09-27</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/twincap/youtube.mp3" target="_blank" rel="noopener">GitHub 저장소</a>
+              </div>
+            </article>
+
+            <article class="project-card" data-category="collab learning">
+              <div class="project-topline">
+                <span class="language-dot csharp"></span>
+                <span>C#</span>
+                <span class="repo-badge alt">참여</span>
+              </div>
+              <h3>dongmaker2</h3>
+              <p>
+                haerin0303 계정에 있는 C# 기반 참여 저장소입니다. 저장소 설명도 dongmaker2로
+                등록되어 있어 구체적인 목적은 코드에서 확인해야 하지만, Twincap 프로필에 연결된
+                협업 또는 참여 프로젝트로 함께 소개합니다.
+              </p>
+              <div class="repo-meta">
+                <span>최근 업데이트: 2025-09-23</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/haerin0303/dongmaker2" target="_blank" rel="noopener">GitHub 저장소</a>
+              </div>
+            </article>
+
+            <article class="project-card" data-category="game web">
+              <div class="project-topline">
+                <span class="language-dot js"></span>
+                <span>JavaScript</span>
+                <span class="repo-badge">개인</span>
+              </div>
+              <h3>Color_diff</h3>
+              <p>
+                저장소 설명처럼 “다른 색깔을 고르는 미니게임”입니다. 색상 차이를 찾아 클릭하는
+                짧은 게임으로, DOM 조작, 점수 표시, 난이도 변화, 반응 피드백 같은 웹 게임의 기본
+                요소를 연습하기 좋은 프로젝트입니다.
+              </p>
+              <div class="repo-meta">
+                <span>최근 업데이트: 2025-09-21</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/twincap/Color_diff" target="_blank" rel="noopener">GitHub 저장소</a>
+              </div>
+            </article>
+
+            <article class="project-card" data-category="learning">
+              <div class="project-topline">
+                <span class="language-dot neutral"></span>
+                <span>미지정</span>
+                <span class="repo-badge">개인</span>
+              </div>
+              <h3>skills-copilot-codespaces-vscode</h3>
+              <p>
+                GitHub Copilot, Codespaces, VS Code 환경을 따라 해 보며 만든 학습용 클론 저장소입니다.
+                개발 환경 설정, 원격 코딩 환경, 튜토리얼 기반 실습 기록을 확인할 수 있는 저장소입니다.
+              </p>
+              <div class="repo-meta">
+                <span>최근 업데이트: 2025-06-16</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/twincap/skills-copilot-codespaces-vscode" target="_blank" rel="noopener">
+                  GitHub 저장소
+                </a>
+              </div>
+            </article>
+
+            <article class="project-card" data-category="learning web">
+              <div class="project-topline">
+                <span class="language-dot neutral"></span>
+                <span>미지정</span>
+                <span class="repo-badge">개인</span>
+              </div>
+              <h3>qwerty2025</h3>
+              <p>
+                qwerty라는 이름의 프로젝트 흐름과 연결된 학습/실험 저장소입니다. 구체적인 설명은
+                비어 있지만, 연도별 프로젝트나 팀 활동 기록을 저장소로 남긴 형태로 볼 수 있습니다.
+              </p>
+              <div class="repo-meta">
+                <span>최근 업데이트: 2025-04-09</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/twincap/qwerty2025" target="_blank" rel="noopener">GitHub 저장소</a>
+              </div>
+            </article>
+
+            <article class="project-card" data-category="web collab">
+              <div class="project-topline">
+                <span class="language-dot js"></span>
+                <span>JavaScript</span>
+                <span class="repo-badge alt">참여</span>
+              </div>
+              <h3>web</h3>
+              <p>
+                sunrin-qwerty 조직의 JavaScript 웹 저장소입니다. Vercel 데모 주소가 연결되어 있어
+                정적/프론트엔드 웹 프로젝트로 확인할 수 있으며, qwerty_web과도 이어지는 협업성
+                웹 실험으로 정리했습니다.
+              </p>
+              <div class="repo-meta">
+                <span>최근 업데이트: 2025-04-05</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/sunrin-qwerty/web" target="_blank" rel="noopener">GitHub 저장소</a>
+                <a href="https://web-peach-seven-91.vercel.app" target="_blank" rel="noopener">데모 보기</a>
+              </div>
+            </article>
+
+            <article class="project-card" data-category="web learning">
+              <div class="project-topline">
+                <span class="language-dot js"></span>
+                <span>JavaScript</span>
+                <span class="repo-badge fork">Fork</span>
+              </div>
+              <h3>qwerty_web</h3>
+              <p>
+                JavaScript 기반 웹 프로젝트의 포크 저장소입니다. Vercel 배포 주소가 연결되어 있고,
+                원본 또는 관련 프로젝트를 바탕으로 프론트엔드 구조와 배포 흐름을 익히는 데 쓰인
+                저장소로 볼 수 있습니다.
+              </p>
+              <div class="repo-meta">
+                <span>최근 업데이트: 2025-03-09</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/twincap/qwerty_web" target="_blank" rel="noopener">GitHub 저장소</a>
+                <a href="https://web-peach-seven-91.vercel.app" target="_blank" rel="noopener">데모 보기</a>
+              </div>
+            </article>
+
+            <article class="project-card" data-category="web game">
+              <div class="project-topline">
+                <span class="language-dot js"></span>
+                <span>JavaScript</span>
+                <span class="repo-badge">개인</span>
+              </div>
+              <h3>TRAINer</h3>
+              <p>
+                저장소 설명은 “웹 지하철 안”입니다. 웹 화면에서 지하철 내부나 이동감을 표현해 본
+                JavaScript 실험으로, 장면 구성, 움직임, 브라우저 UI 표현을 다루는 프로젝트입니다.
+              </p>
+              <div class="repo-meta">
+                <span>최근 업데이트: 2024-12-10</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/twincap/TRAINer" target="_blank" rel="noopener">GitHub 저장소</a>
+              </div>
+            </article>
+
+            <article class="project-card" data-category="web learning">
+              <div class="project-topline">
+                <span class="language-dot html"></span>
+                <span>HTML</span>
+                <span class="repo-badge">개인</span>
+              </div>
+              <h3>my_website</h3>
+              <p>
+                HTML 기반 개인 웹사이트 연습 저장소입니다. 기본 페이지 구조, 링크, 텍스트 배치,
+                정적 사이트 작성 흐름을 익히기 위한 초기 포트폴리오 또는 웹 실험 기록으로 볼 수 있습니다.
+              </p>
+              <div class="repo-meta">
+                <span>최근 업데이트: 2024-09-22</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/twincap/my_website" target="_blank" rel="noopener">GitHub 저장소</a>
+              </div>
+            </article>
+
+            <article class="project-card" data-category="web learning">
+              <div class="project-topline">
+                <span class="language-dot html"></span>
+                <span>HTML</span>
+                <span class="repo-badge">개인</span>
+              </div>
+              <h3>rPtksrl</h3>
+              <p>
+                HTML 기반의 작은 웹 실험 저장소입니다. 저장소 이름만으로 목적이 완전히 드러나지는
+                않지만, 정적 페이지를 만들며 구조와 스타일을 연습한 기록으로 정리할 수 있습니다.
+              </p>
+              <div class="repo-meta">
+                <span>최근 업데이트: 2024-09-02</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/twincap/rPtksrl" target="_blank" rel="noopener">GitHub 저장소</a>
+              </div>
+            </article>
+
+            <article class="project-card" data-category="learning">
+              <div class="project-topline">
+                <span class="language-dot neutral"></span>
+                <span>미지정</span>
+                <span class="repo-badge fork">Fork</span>
+              </div>
+              <h3>git_practice</h3>
+              <p>
+                Git 사용법을 익히기 위한 연습용 포크 저장소입니다. 커밋, 브랜치, 원격 저장소,
+                pull/push 같은 기본 흐름을 실습하면서 GitHub 사용 경험을 쌓기 위한 기록입니다.
+              </p>
+              <div class="repo-meta">
+                <span>최근 업데이트: 2024-06-03</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/twincap/git_practice" target="_blank" rel="noopener">GitHub 저장소</a>
+              </div>
+            </article>
+
+            <article class="project-card" data-category="game web">
+              <div class="project-topline">
+                <span class="language-dot js"></span>
+                <span>JavaScript</span>
+                <span class="repo-badge">개인</span>
+              </div>
+              <h3>POPCAT</h3>
+              <p>
+                저장소 설명은 “pop cat gg”입니다. 클릭 반응과 점수 표시를 다루는 JavaScript 미니
+                게임으로, 단순한 사용자 입력을 화면 피드백과 연결하는 기본 웹 게임 구조를 살펴볼
+                수 있습니다.
+              </p>
+              <div class="repo-meta">
+                <span>최근 업데이트: 2024-01-11</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/twincap/POPCAT" target="_blank" rel="noopener">GitHub 저장소</a>
+              </div>
+            </article>
+          </div>
+
+          <p class="empty-state" id="empty-state" hidden>선택한 분류에 해당하는 저장소가 없습니다.</p>
         </div>
       </section>
 
-      <section class="section" id="contact">
+      <section class="section" id="policy" aria-labelledby="policy-title">
         <div class="container">
-          <h2>문의처</h2>
-          <p>
-            서비스 관련 문의, 제휴 제안, 개선 요청은 아래 이메일로 전달해 주세요.
-            가능한 빠르게 확인 후 답변드리겠습니다.
-          </p>
-          <p>
-            이메일: <a href="mailto:contact@twincap.tools">contact@twincap.tools</a>
-          </p>
+          <div class="section-heading">
+            <div>
+              <p class="section-label">Site Policy</p>
+              <h2 id="policy-title">정책을 고려한 운영 방식</h2>
+            </div>
+            <p>
+              Google 게시자 정책에서 문제 삼는 “콘텐츠가 없거나 이동만을 위한 화면”이 되지 않도록
+              메인 페이지 안에 직접 작성한 설명과 저장소별 맥락을 충분히 넣었습니다.
+            </p>
+          </div>
+          <div class="principle-list">
+            <section>
+              <h3>광고 코드 미삽입</h3>
+              <p>
+                현재 루트 사이트에는 Google 광고 스크립트와 광고 슬롯을 넣지 않았습니다. 승인 전에는
+                콘텐츠 품질과 사이트 구조를 먼저 정리합니다.
+              </p>
+            </section>
+            <section>
+              <h3>직접 작성한 설명</h3>
+              <p>
+                저장소 설명이 비어 있거나 짧은 경우에도 단순 복사 대신 어떤 프로젝트인지 사람이
+                이해할 수 있도록 직접 설명을 추가했습니다.
+              </p>
+            </section>
+            <section>
+              <h3>명확한 이동 경로</h3>
+              <p>
+                모든 저장소는 GitHub 원본 링크로 이동할 수 있고, 데모 주소가 있는 경우 별도 링크를
+                표시했습니다. 방문자가 목적 없이 막히는 화면이 없도록 구성했습니다.
+              </p>
+            </section>
+          </div>
+        </div>
+      </section>
+
+      <section class="section contact-section" id="contact" aria-labelledby="contact-title">
+        <div class="container contact-inner">
+          <div>
+            <p class="section-label">Contact</p>
+            <h2 id="contact-title">문의와 제안</h2>
+            <p>
+              프로젝트 개선 제안, 오류 제보, 저장소 관련 질문은 GitHub 프로필 또는 이 사이트
+              저장소의 이슈를 통해 남길 수 있습니다.
+            </p>
+          </div>
+          <div class="contact-actions">
+            <a class="button primary" href="https://github.com/twincap" target="_blank" rel="noopener">GitHub 프로필</a>
+            <a class="button secondary" href="https://github.com/twincap/twincap.github.io/issues" target="_blank" rel="noopener">
+              이슈 남기기
+            </a>
+          </div>
         </div>
       </section>
     </main>
 
-    <footer>
-      <div class="container">Copyright 2026 Twincap. All rights reserved.</div>
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p>&copy; <span id="year">2026</span> Twincap. All rights reserved.</p>
+        <nav aria-label="하단 메뉴">
+          <a href="privacy.html">개인정보처리방침</a>
+          <a href="terms.html">이용 안내</a>
+          <a href="https://github.com/twincap" target="_blank" rel="noopener">GitHub</a>
+        </nav>
+      </div>
     </footer>
   </body>
 </html>
